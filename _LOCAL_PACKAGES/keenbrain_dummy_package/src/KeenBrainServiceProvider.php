@@ -61,7 +61,7 @@ class KeenBrainServiceProvider extends ServiceProvider
      */
     protected function configureMigrations()
     {
-        if (KeenBrain::runsMigrations() && $this->app->runningInConsole()) {
+        if ($this->app->runningInConsole()) {
             $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         }
     }
