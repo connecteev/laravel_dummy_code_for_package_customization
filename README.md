@@ -3,8 +3,8 @@
 - Tech Stack: Laravel with InertiaJs + vue with SSR enabled
 
 - The goal is to:
-    - Finish migrating the package from webpack (laravel mix) to vite, and get http://127.0.0.1:8000/billing and http://127.0.0.1:8000/foo to work. This currently shows an error in the console.
-    - Then be able to customize the page at /billing of the keenbrain/dummy-package package locally, so I can see and learn how to do it with other pages hosted within a Laravel package.
+    - Finish migrating the package from webpack (laravel mix) to vite, and get http://127.0.0.1:8000/portal and http://127.0.0.1:8000/foo to work. This currently shows an error in the console.
+    - Then be able to customize the page at /portal of the keenbrain/dummy-package package locally, so I can see and learn how to do it with other pages hosted within a Laravel package.
 -----------------------------------------------------------------------------
 ## Installation
 
@@ -30,9 +30,9 @@ Terminal 3: (for the package)
 - Go to http://127.0.0.1:8000/ and log in with: test@example.com / password (or go to http://127.0.0.1:8000/register and create an account. This will log you in.)
 - After you are logged in, you will end up on http://127.0.0.1:8000/dashboard
 - Go to http://127.0.0.1:8000/foo to check if the page loads. This does NOT WORK.
-- Go to http://127.0.0.1:8000/billing to check if the page loads. This does NOT WORK.
+- Go to http://127.0.0.1:8000/portal to check if the page loads. This does NOT WORK.
 
-Error in console when we go to http://127.0.0.1:8000/billing:
+Error in console when we go to http://127.0.0.1:8000/portal:
 ```
 GET http://[::1]:5173/resources/js/Pages/MyPortal.vue net::ERR_ABORTED 404 (Not Found)
 index.js:4 Uncaught (in promise) Error: Page not found: ./Pages/MyPortal.vue

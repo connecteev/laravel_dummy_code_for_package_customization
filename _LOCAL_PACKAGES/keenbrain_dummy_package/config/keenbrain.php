@@ -4,7 +4,7 @@ use App\Models\User;
 
 return [
 
-    'path' => 'billing',
+    'path' => 'portal',
 
     'middleware' => ['web', 'auth'],
 
