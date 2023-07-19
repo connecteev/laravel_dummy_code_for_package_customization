@@ -1,7 +1,7 @@
 <template>
-    <div class="font-sans antialiased min-h-screen bg-white lg:bg-gray-100">
+    <div class="font-sans antialiased min-h-screen bg-white lg:bg-gray-300">
         <div class="lg:min-h-screen bg flex flex-wrap lg:flex-nowrap">
-            <!-- Static Desktop Sidebar -->
+
             <div class="order-last lg:order-first lg:max-w-md py-10 lg:pt-24 px-6 bg-white lg:shadow-lg" id="sideBar">
                 <div class="max-w-md" v-if="$page.props.appLogo" v-html="$page.props.appLogo">
                 </div>
@@ -11,7 +11,7 @@
                 </h1>
 
                 <h2 class="mt-1 text-lg font-semibold text-gray-700">
-                    Billing Management
+                    Management Portal
                 </h2>
 
                 <div class="flex items-center mt-12 text-gray-600">
@@ -26,18 +26,9 @@
                     </div>
                 </div>
 
-                <div class="mt-3 text-sm text-gray-600" v-if="$page.props.billableName">
-                    {{ __('Managing billing for :billableName', {billableName: $page.props.billableName}) }}.
-                </div>
 
                 <div class="mt-12 text-gray-600">
-                    {{ __('Our billing management portal allows you to conveniently manage your subscription plan, payment methods, and download your recent invoices.') }}
-                </div>
-
-                <div class="mt-12" id="sideBarTermsLink" v-if="$page.props.termsUrl">
-                    <a :href="$page.props.termsUrl" class="text-gray-600 underline" target="_blank">
-                        {{ __('Terms of Service') }}
-                    </a>
+                    Our management portal allows you to conveniently manage everything.
                 </div>
 
                 <div class="mt-12" id="sideBarReturnLink">
@@ -78,13 +69,6 @@ export default {
     },
 
     props: [
-        'balance',
-        'invoices',
-
-        'billableId',
-        'billableType',
-        'plan',
-        'seatName',
         'userName',
     ],
 
@@ -129,35 +113,7 @@ export default {
     methods: {
         myDummyButton() {
             alert('myDummyButton');
-        },
-
-        /**
-         * Make an outgoing request to the Laravel application.
-         */
-        request(method, url, data = {}) {
-            this.errors = [];
-
-            data.billableType = this.billableType;
-            data.billableId = this.billableId;
-
-            return axios.request({
-                url: url,
-                method: method,
-                data: data,
-            }).then(response => {
-                return response;
-            }).catch(error => {
-                if (error.response.status == 422) {
-                    this.errors = _.flatMap(error.response.data.errors)
-                } else {
-                    this.errors = [this.__('An unexpected error occurred and we have notified our support team. Please try again later.')]
-                }
-
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            });
-        },
-
+        }
     },
 }
 </script>
