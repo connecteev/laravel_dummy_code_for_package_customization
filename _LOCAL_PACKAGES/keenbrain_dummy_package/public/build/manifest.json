@@ -2,17 +2,8 @@
   "__plugin-vue_export-helper-c27b6911.js": {
     "file": "assets/_plugin-vue_export-helper-c27b6911.js"
   },
-  "resources/js/Pages/BillingPortal.vue": {
-    "file": "assets/BillingPortal-dff97242.js",
-    "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
-      "resources/js/app.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/Pages/BillingPortal.vue"
-  },
   "resources/js/Pages/Foo.vue": {
-    "file": "assets/Foo-62e322ac.js",
+    "file": "assets/Foo-380701af.js",
     "imports": [
       "__plugin-vue_export-helper-c27b6911.js",
       "resources/js/app.js"
@@ -20,19 +11,28 @@
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Foo.vue"
   },
+  "resources/js/Pages/MyPortal.vue": {
+    "file": "assets/MyPortal-98578355.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/MyPortal.vue"
+  },
   "resources/js/app.css": {
-    "file": "assets/app-c4d0ec05.css",
+    "file": "assets/app-e3703141.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
     "css": [
-      "assets/app-c4d0ec05.css"
+      "assets/app-e3703141.css"
     ],
     "dynamicImports": [
-      "resources/js/Pages/BillingPortal.vue",
-      "resources/js/Pages/Foo.vue"
+      "resources/js/Pages/Foo.vue",
+      "resources/js/Pages/MyPortal.vue"
     ],
-    "file": "assets/app-2e0d91aa.js",
+    "file": "assets/app-bb6208b7.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }
