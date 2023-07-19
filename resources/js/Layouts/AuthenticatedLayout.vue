@@ -65,7 +65,7 @@ const showingNavigationDropdown = ref(false);
 
                                     <template #content>
                                         <DropdownLink :href="route('profile.edit')"> Profile </DropdownLink>
-                                        <DropdownLink href="/billing"> Billing </DropdownLink>
+                                        <DropdownLink :href="route('keenbrain.portal')"> Portal </DropdownLink>
                                         <DropdownLink :href="route('logout')" method="post" as="button">
                                             Log Out
                                         </DropdownLink>
