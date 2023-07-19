@@ -1,0 +1,52 @@
+{
+    "name": "keenbrain/dummy-package",
+    "description": "KeenBrain dummy package",
+    "keywords": ["laravel", "scaffolding", "saas"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "KP"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ext-json": "*",
+        "dompdf/dompdf": "^2.0",
+        "illuminate/contracts": "^9.0|^10.0",
+        "inertiajs/inertia-laravel": "^0.5.1|^0.6.4",
+        "laravel/cashier": "^14.8",
+        "mpociot/vat-calculator": "^3.0",
+        "tightenco/ziggy": "^1.6"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.0",
+        "orchestra/testbench": "^7.0|^8.0",
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "KeenBrain\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KeenBrain\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "4.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "KeenBrain\\KeenBrainServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
