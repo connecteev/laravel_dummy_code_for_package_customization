@@ -16,21 +16,6 @@ class KeenBrainServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        KeenBrain::billable(User::class)->resolve(function (Request $request) {
-            return $request->user();
-        });
 
-        KeenBrain::billable(User::class)->authorize(function (User $billable, Request $request) {
-            return $request->user() &&
-                   $request->user()->id == $billable->id;
-        });
-
-        KeenBrain::billable(User::class)->checkPlanEligibility(function (User $billable, Plan $plan) {
-            // if ($billable->projects > 5 && $plan->name == 'Basic') {
-            //     throw ValidationException::withMessages([
-            //         'plan' => 'You have too many projects for the selected plan.'
-            //     ]);
-            // }
-        });
     }
 }

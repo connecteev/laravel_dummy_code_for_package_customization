@@ -11,12 +11,12 @@
                 </h1>
 
                 <h2 class="mt-1 text-lg font-semibold text-gray-700">
-                    {{ __('Billing Management') }}
+                    Billing Management
                 </h2>
 
                 <div class="flex items-center mt-12 text-gray-600">
                     <div>
-                        {{ __('Signed in as') }}
+                        Signed in as
                     </div>
 
                     <img :src="$page.props.userAvatar" class="ml-2 h-6 w-6 rounded-full" v-if="$page.props.userAvatar"/>

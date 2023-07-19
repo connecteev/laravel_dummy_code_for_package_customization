@@ -4,26 +4,6 @@ namespace KeenBrain;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @method static \Illuminate\Support\Collection plans($billableType)
- * @method static \KeenBrain\Billable|null resolveBillable($type, \Illuminate\Http\Request $request)
- * @method static \KeenBrain\Plan plan($billableType, $name, $id)
- * @method static bool chargesPerSeat($billableType)
- * @method static bool isAuthorizedToViewBillingPortal($billable, \Illuminate\Http\Request $request)
- * @method static bool runsMigrations()
- * @method static int seatCount($billableType, $billable)
- * @method static string seatName($billableType)
- * @method static string billableModel($billableType)
- * @method static string prorationBehavior()
- * @method static void authorizeUsing($type, $callback)
- * @method static void chargePerSeat($billableType, $seatName, $callback)
- * @method static void checkPlanEligibilityUsing($type, $callback)
- * @method static void ensurePlanEligibility($billable, $plan)
- * @method static void checkoutSessionOptions($billableType, $callback)
- * @method static void ignoreMigrations()
- * @method static void resolveBillableUsing($type, $callback)
- *
- */
 class KeenBrain extends Facade
 {
     /**

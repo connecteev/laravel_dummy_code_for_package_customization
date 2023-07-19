@@ -13,5 +13,5 @@ Route::group([
     'namespace' => 'KeenBrain\Http\Controllers',
     'prefix' => config('keenbrain.path'),
 ], function () {
-    Route::get('/{type?}/{id?}', 'BillingPortalController')->name('keenbrain.portal');
+    Route::get('/{type?}/{id?}', 'MyPortalController')->name('keenbrain.portal');
 });

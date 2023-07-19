@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\View;
 use Inertia\Inertia;
 use KeenBrain\KeenBrain;
 
-class BillingPortalController
+class MyPortalController
 {
 
     /**
-     * Show the billing portal.
+     * Show my portal.
      *
      * @param  string|null  $type
      * @param  mixed  $id
@@ -27,9 +27,7 @@ class BillingPortalController
             'translations' => static::getTranslations(),
         ]);
 
-        return Inertia::render('BillingPortal', [
-            'subscribingTo' => request('subscribe') ? $this->planToSubscribeTo($type) : null,
-        ]);
+        return Inertia::render('MyPortal', []);
     }
 
     /**
@@ -44,18 +42,5 @@ class BillingPortalController
         }
 
         return is_readable($file) ? file_get_contents($file) : '{}';
-    }
-
-    /**
-     * Get the plan the user is subscribing to.
-     *
-     * @param  string  $type
-     * @return \KeenBrain\Plan $Plan
-     */
-    private function planToSubscribeTo($type)
-    {
-        return KeenBrain::plans($type)->first(function ($plan) {
-            return $plan->id == request('subscribe');
-        });
     }
 }
