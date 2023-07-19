@@ -34,13 +34,13 @@ Terminal 3: (for the package)
 
 Error in console when we go to http://127.0.0.1:8000/billing:
 ```
-GET http://[::1]:5173/resources/js/Pages/BillingPortal.vue 404 (Not Found)
-index.js:4 Uncaught (in promise) Error: Page not found: ./Pages/BillingPortal.vue
-at resolvePageComponent (index.js:4:15)
-at resolve (app.js:13:24)
-at r (createInertiaApp.ts:34:54)
-at j2 (createInertiaApp.ts:38:24)
-at app.js:11:1
+GET http://[::1]:5173/resources/js/Pages/MyPortal.vue net::ERR_ABORTED 404 (Not Found)
+index.js:4 Uncaught (in promise) Error: Page not found: ./Pages/MyPortal.vue
+    at resolvePageComponent (index.js:4:15)
+    at resolve (app.js:13:24)
+    at r (createInertiaApp.ts:34:54)
+    at j2 (createInertiaApp.ts:38:24)
+    at app.js:11:1
 ```
 -----------------------------------------------------------------------------
 
