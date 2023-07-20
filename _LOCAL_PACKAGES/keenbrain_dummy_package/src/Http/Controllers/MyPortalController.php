@@ -27,7 +27,7 @@ class MyPortalController
             'translations' => static::getTranslations(),
         ]);
 
-        return Inertia::render('MyPortal', []);
+        return Inertia::render("MyPortal", []);
     }
 
     /**
